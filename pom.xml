@@ -16,6 +16,7 @@
 
   <properties>
     <bus.version>1.0.0</bus.version>
+    <sc-share-common.version>1.0.0</sc-share-common.version>
     <spring.boot.version>2.3.0.RELEASE</spring.boot.version>
     <spring.cloud.version>Hoxton.SR5</spring.cloud.version>
   </properties>
