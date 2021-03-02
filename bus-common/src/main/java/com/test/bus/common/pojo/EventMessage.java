@@ -3,6 +3,8 @@ package com.test.bus.common.pojo;
 
 import lombok.*;
 
+import javax.annotation.Nonnull;
+
 /**
  * @author 费世程
  * @date 2021/2/26 11:32
@@ -40,5 +42,10 @@ public class EventMessage<T> {
    * 事件产生时间戳
    */
   private long timestamp = System.currentTimeMillis();
+
+  EventMessage(@Nonnull String topic, @NonNull T payload) {
+    this.topic = topic;
+    this.payload = payload;
+  }
 
 }

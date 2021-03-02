@@ -12,6 +12,7 @@
     <module>bus-server</module>
     <module>bus-common</module>
     <module>bus-api</module>
+    <module>bus-api-internal</module>
   </modules>
 
   <properties>
