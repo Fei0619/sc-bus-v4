@@ -1,4 +1,4 @@
-package com.test.bus.common.pojo;
+package com.test.bus.common.pojo.message;
 
 import org.springframework.lang.NonNull;
 
@@ -72,5 +72,10 @@ public class EventHolder {
     EventMessage<?> eventMessage = this.messages.get(cursor);
     eventMessage.setDelayMillis(duration.toMillis());
     return this;
+  }
+
+  // ----
+  public List<EventMessage<?>> getMessages() {
+    return this.messages;
   }
 }

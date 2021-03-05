@@ -1,6 +1,6 @@
 package com.test.bus.common.util;
 
-import com.test.bus.common.pojo.EventHeaders;
+import com.test.bus.common.pojo.message.EventHeaders;
 import com.test.share.common.json.JsonUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

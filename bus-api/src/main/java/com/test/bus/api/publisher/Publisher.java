@@ -1,7 +1,8 @@
 package com.test.bus.api.publisher;
 
-import com.test.bus.common.pojo.EventHolder;
-import com.test.bus.common.pojo.EventMessage;
+import com.test.bus.common.pojo.message.EventHolder;
+import com.test.bus.common.pojo.message.EventMessage;
+import org.springframework.lang.NonNull;
 
 import java.util.List;
 
@@ -24,9 +25,14 @@ public interface Publisher<T> {
   /*
    java8中提供了关键字[default]，接口中使用该关键字修饰的方法可以有自己的实现
    */
-  default T publish(EventHolder holder) {
-    //todo
-    return null;
+  @NonNull
+  default T publish(@NonNull EventHolder holder) {
+    List<EventMessage<?>> messages = holder.getMessages();
+    if (messages.size() == 1) {
+      return publish(messages.get(0));
+    } else {
+      return batchPublish(messages);
+    }
   }
 
 }

@@ -1,4 +1,4 @@
-package com.test.bus.common.pojo;
+package com.test.bus.common.pojo.message;
 
 import java.beans.Transient;
 

@@ -1,6 +1,7 @@
-package com.test.bus.common.pojo;
+package com.test.bus.common.pojo.message;
 
 
+import com.test.bus.common.pojo.message.EventHeaders;
 import lombok.*;
 
 import javax.annotation.Nonnull;
